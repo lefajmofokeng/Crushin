@@ -2,36 +2,42 @@
    DATA
 ══════════════════════ */
 const CATS=[
-  {id:'coffee',label:'Hot Coffee'},
-  {id:'cold',label:'Cold Brew & Iced',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/></svg>`},
-  {id:'cake',label:'Signature Cakes',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M20 21v-8a2 2 0 00-2-2H6a2 2 0 00-2 2v8"/><path d="M4 21h16M12 3v6M8 7l4-4 4 4"/></svg>`},
-  {id:'pastry',label:'Cupcakes & Muffins',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5v1H7V7a5 5 0 015-5z"/><rect x="4" y="8" width="16" height="12" rx="2"/></svg>`},
-  {id:'tea',label:'Specialty Teas',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M17 8h2a2 2 0 010 4h-2"/><path d="M5 8h12v8a4 4 0 01-4 4H9a4 4 0 01-4-4V8z"/></svg>`},
+  {id:'fish',label:'Fish & Chips',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M2 12c0 0 4-8 10-8s10 8 10 8-4 8-10 8S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`},
+  {id:'burgers',label:'Burgers & Wraps',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M3 9h18M3 15h18M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>`},
+  {id:'salads',label:'Salads & Sides',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 12 7 8 4 8s-3 4 0 6 8 6 8 6 5-4 8-4 3 4 0 6-8 6-8 6"/></svg>`},
+  {id:'platters',label:'Sharing Platters',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2v20"/></svg>`},
+  {id:'sauces',label:'Sauces & Dips',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M10 2v6l-2 3h8l-2-3V2"/><path d="M8 11v9a2 2 0 004 0v-9"/></svg>`},
+  {id:'drinks',label:'Cold Drinks',icon:`<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/></svg>`},
 ];
 
 const products=[
-  {id:1,name:"Phoka Signature Espresso",cat:"coffee",price:45,desc:"Rich double shot with chocolate undertones",img:"https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=600&q=85",badge:"popular",coffee:true},
-  {id:2,name:"Caramel Cloud Latte",cat:"coffee",price:65,desc:"Smooth espresso with caramel & steamed oat milk",img:"https://images.unsplash.com/photo-1559496417-e7f25cb247f3?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"popular",coffee:true},
-  {id:3,name:"Ethiopian Pour Over",cat:"coffee",price:70,desc:"Single origin, light roast, citrus & floral notes",img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=85",coffee:true},
-  {id:4,name:"Vanilla Bean Cappuccino",cat:"coffee",price:60,desc:"Classic cappuccino with Madagascar vanilla",img:"https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=85",coffee:true},
-  {id:5,name:"Flat White",cat:"coffee",price:55,desc:"Velvety micro-foam espresso, Australian style",img:"https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=85",coffee:true},
-  {id:6,name:"Cortado",cat:"coffee",price:50,desc:"Equal parts espresso & warm milk, balanced",img:"https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=85",coffee:true},
-  {id:7,name:"Cold Brew Original",cat:"cold",price:65,desc:"12-hour steeped, smooth & naturally sweet",img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=85",badge:"popular"},
-  {id:8,name:"Nitro Cold Brew",cat:"cold",price:75,desc:"Silky nitrogen-infused cold brew on tap",img:"https://images.unsplash.com/photo-1634462180358-b5949e4a0028?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"new"},
-  {id:9,name:"Iced Brown Sugar Oat Latte",cat:"cold",price:72,desc:"Espresso over ice, oat milk & brown sugar syrup",img:"https://images.unsplash.com/photo-1630248904474-a7927610a5db?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-  {id:10,name:"Mango Cold Brew Tonic",cat:"cold",price:70,desc:"Cold brew + mango + sparkling tonic",img:"https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=85",badge:"new"},
-  {id:11,name:"Triple Chocolate Cake",cat:"cake",price:180,desc:"Moist dark chocolate sponge, ganache frosting",img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=85",badge:"popular"},
-  {id:12,name:"Red Velvet Beauty",cat:"cake",price:165,desc:"Cream cheese frosting, crimson velvet layers",img:"https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=85"},
-  {id:13,name:"Lemon Drizzle Loaf",cat:"cake",price:140,desc:"Zesty lemon sponge with a tangy glaze",img:"https://images.unsplash.com/photo-1551404973-761c83cd8339?auto=format&fit=crop&w=600&q=85",badge:"new"},
-  {id:14,name:"Carrot & Walnut Cake",cat:"cake",price:155,desc:"Spiced carrot cake, walnuts & cream cheese",img:"https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&q=85"},
-  {id:15,name:"Salted Caramel Cupcake",cat:"pastry",price:55,desc:"Butter cupcake, salted caramel buttercream",img:"https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&q=85",badge:"popular"},
-  {id:16,name:"Dark Choc Fudge Cupcake",cat:"pastry",price:55,desc:"Rich fudge centre, chocolate ganache top",img:"https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=85"},
-  {id:17,name:"Blueberry Streusel Muffin",cat:"pastry",price:48,desc:"Juicy blueberries, crunchy streusel topping",img:"https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"new"},
-  {id:18,name:"Matcha White Choc Muffin",cat:"pastry",price:52,desc:"Japanese matcha with white chocolate chips",img:"https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=600&q=85"},
-  {id:19,name:"Masala Chai Latte",cat:"tea",price:58,desc:"Spiced chai, steamed oat milk, honey drizzle",img:"https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=600&q=85",badge:"popular"},
-  {id:20,name:"Ceremonial Matcha Latte",cat:"tea",price:72,desc:"Japanese grade matcha, frothed oat milk",img:"https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=85",badge:"new"},
-  {id:21,name:"Moroccan Mint Tea",cat:"tea",price:42,desc:"Loose leaf mint, brewed in a traditional pot",img:"https://images.unsplash.com/photo-1579992357154-faf4bde95b3d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-  {id:22,name:"Hibiscus & Rose Iced Tea",cat:"tea",price:50,desc:"Floral & tart, served chilled with rose petals",img:"https://images.unsplash.com/photo-1579992357036-b19b591b7519?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  {id:1,name:"Classic Battered Hake",cat:"fish",price:89,desc:"Golden crispy batter, thick-cut chips & tartar sauce",img:"https://images.unsplash.com/photo-1680678605629-278edc5fe99d?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"popular"},
+  {id:2,name:"Grilled Linefish of the Day",cat:"fish",price:109,desc:"Fresh daily catch, lemon butter, served with chips",img:"https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=85",badge:"new"},
+  {id:3,name:"Fish Fillet Basket",cat:"fish",price:95,desc:"Three crispy fillets with seasoned chips & coleslaw",img:"https://images.unsplash.com/photo-1700760933394-976f1d27dff2?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  {id:4,name:"Calamari & Chips",cat:"fish",price:99,desc:"Tender rings of calamari, crumbed & fried golden",img:"https://images.unsplash.com/photo-1734771219838-61863137b117?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"popular"},
+  {id:5,name:"Prawn Basket",cat:"fish",price:135,desc:"Juicy prawns in beer batter with chips & aioli",img:"https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=85"},
+  {id:6,name:"Fish Cake & Chips",cat:"fish",price:79,desc:"House-made fish cakes, mushy peas & chips",img:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=85"},
+  {id:7,name:"Chip Roll (Slap Chips)",cat:"fish",price:35,desc:"Thick-cut chips in a soft roll with tomato sauce",img:"https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=85"},
+  {id:8,name:"Crispy Fish Burger",cat:"burgers",price:85,desc:"Beer-battered fillet, slaw, gherkins & house sauce",img:"https://images.unsplash.com/photo-1643133277733-66a476f7f32e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"popular"},
+  {id:9,name:"Prawn Wrap",cat:"burgers",price:95,desc:"Panko prawns, avocado, lettuce & chilli mayo wrap",img:"https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=85",badge:"new"},
+  {id:10,name:"Double Beef Smashburger",cat:"burgers",price:99,desc:"Two smashed patties, cheese, pickles & special sauce",img:"https://images.unsplash.com/photo-1696935302123-372d54ab941e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  {id:11,name:"Calamari Wrap",cat:"burgers",price:79,desc:"Fried calamari, tzatziki, cucumber & fresh herbs",img:"https://images.unsplash.com/photo-1655895176036-bf1a11326e5c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  {id:12,name:"Classic Greek Salad",cat:"salads",price:65,desc:"Feta, olives, cucumber, tomato & red onion",img:"https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=85",badge:"popular"},
+  {id:13,name:"Coleslaw",cat:"salads",price:35,desc:"Creamy house-made coleslaw with red cabbage",img:"https://images.unsplash.com/photo-1607532941433-304659e8198a?auto=format&fit=crop&w=600&q=85"},
+  {id:14,name:"Garden Side Salad",cat:"salads",price:45,desc:"Mixed greens, cherry tomatoes & balsamic dressing",img:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=85"},
+  {id:15,name:"Mushy Peas",cat:"salads",price:28,desc:"Classic British side, buttered & seasoned",img:"https://images.unsplash.com/photo-1595016111459-799a195e7452?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"new"},
+  {id:16,name:"Corn on the Cob",cat:"salads",price:32,desc:"Grilled corn, herb butter & sea salt",img:"https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=600&q=85"},
+  {id:17,name:"Family Fish Platter",cat:"platters",price:299,desc:"4 fillets, calamari rings, prawns, chips & 4 sides",img:"https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=600&q=85",badge:"popular"},
+  {id:18,name:"Mixed Seafood Platter",cat:"platters",price:349,desc:"Grilled & fried selection for two with all the sides",img:"https://images.unsplash.com/photo-1727198826762-8a2bd0cb107b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  {id:19,name:"Chip Bucket (1kg)",cat:"platters",price:79,desc:"Seasoned thick-cut chips for the whole table",img:"https://images.unsplash.com/photo-1630431341973-02e1b662ec35?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"popular"},
+  {id:20,name:"Tartar Sauce",cat:"sauces",price:18,desc:"Classic creamy tartar with capers & dill",img:"https://images.unsplash.com/photo-1734772257288-d53770c7707f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",badge:"popular"},
+  {id:21,name:"Peri-Peri Dip",cat:"sauces",price:18,desc:"Smoky, fiery peri-peri chilli sauce",img:"https://images.pexels.com/photos/12339111/pexels-photo-12339111.jpeg"},
+  {id:22,name:"Garlic Aioli",cat:"sauces",price:18,desc:"Roasted garlic whipped aioli, smooth & rich",img:"https://images.pexels.com/photos/5848055/pexels-photo-5848055.jpeg"},
+  {id:23,name:"Sweet Chilli Sauce",cat:"sauces",price:18,desc:"House-made sweet chilli for dipping",img:"https://images.pexels.com/photos/33980002/pexels-photo-33980002.jpeg",badge:"new"},
+  {id:24,name:"Coca-Cola",cat:"drinks",price:28,desc:"Ice-cold 330ml can",img:"https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=600&q=85"},
+  {id:25,name:"Still Water",cat:"drinks",price:18,desc:"500ml spring water",img:"https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=600&q=85"},
+  {id:26,name:"Fresh Lemonade",cat:"drinks",price:35,desc:"Freshly squeezed with mint & ice",img:"https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=600&q=85",badge:"popular"},
+  {id:27,name:"Iced Tea",cat:"drinks",price:32,desc:"Peach or lemon flavoured iced tea",img:"https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=85"},
 ];
 
 /* ══════════════════════
@@ -49,34 +55,106 @@ let currentFilter='all';
 let favourites=new Set();
 
 /* ══════════════════════
-   RENDER
+   RENDER — HORIZONTAL ROWS WITH SEE ALL
 ══════════════════════ */
+const VISIBLE_PER_ROW = 4; // how many show by default
+
 function renderMenu(){
   const content=document.getElementById('menuContent');
-  const catsToShow=currentFilter==='all'?CATS.map(c=>c.id):[currentFilter];
-
   let html='';
-  catsToShow.forEach(catId=>{
-    const catInfo=CATS.find(c=>c.id===catId);
-    const items=products.filter(p=>p.cat===catId);
+  CATS.forEach(catInfo=>{
+    const items=products.filter(p=>p.cat===catInfo.id);
     if(!items.length)return;
+    const visible=items.slice(0,VISIBLE_PER_ROW);
+    const extra=items.slice(VISIBLE_PER_ROW);
+    const hasExtra=extra.length>0;
     html+=`
-      <div class="category-group" id="cat-${catId}">
+      <div class="category-group" id="cat-${catInfo.id}">
         <div class="category-group-header">
-          
-          <div class="cat-group-title">${catInfo.label}</div>
-          <div class="cat-group-count">${items.length} items</div>
+          <div class="cat-group-title-wrap">
+            
+            <div class="cat-group-title">${catInfo.label}</div>
+          </div>
         </div>
-        <div class="products-grid">
-          ${items.map((p,i)=>productCardHTML(p,i)).join('')}
+        <div class="products-row">
+          ${visible.map((p,i)=>productCardHTML(p,i)).join('')}
         </div>
+        ${hasExtra?`<div class="products-extra" id="extra-${catInfo.id}">
+          ${extra.map((p,i)=>productCardHTML(p,i+VISIBLE_PER_ROW)).join('')}
+        </div>`:''}
+        ${hasExtra?`<div class="see-all-wrap">
+          <button class="see-all-btn" id="seeall-${catInfo.id}" onclick="toggleSeeAll('${catInfo.id}')">
+            <span class="see-all-label">See all ${items.length} items</span>
+            <span class="see-all-arrow"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+        </div>`:''}
       </div>
     `;
   });
-
   content.innerHTML=html||'<p style="color:var(--text-muted);padding:40px 0;">No items found.</p>';
   observeReveal();
 }
+
+function toggleSeeAll(catId){
+  const extra=document.getElementById('extra-'+catId);
+  const btn=document.getElementById('seeall-'+catId);
+  if(!extra||!btn)return;
+  const isOpen=extra.classList.contains('expanded');
+  extra.classList.toggle('expanded',!isOpen);
+  btn.classList.toggle('open',!isOpen);
+  const label=btn.querySelector('.see-all-label');
+  if(label){
+    const items=products.filter(p=>p.cat===catId);
+    label.textContent=isOpen?`See all ${items.length} items`:'See less';
+  }
+  if(!isOpen){setTimeout(()=>observeReveal(),50);}
+}
+
+/* ══════════════════════
+   REAL-TIME SEARCH
+══════════════════════ */
+function handleSearch(query){
+  const results=document.getElementById('pkc-search-results');
+  const inner=document.getElementById('pkc-search-results-inner');
+  const q=query.trim().toLowerCase();
+  if(!q){results.classList.remove('visible');return;}
+  const matches=products.filter(p=>
+    p.name.toLowerCase().includes(q)||
+    p.desc.toLowerCase().includes(q)||
+    (CATS.find(c=>c.id===p.cat)||{}).label.toLowerCase().includes(q)
+  ).slice(0,8);
+  if(!matches.length){
+    inner.innerHTML='<div class="pkc-search-no-results">No results for "'+query+'"</div>';
+    results.classList.add('visible');
+    return;
+  }
+  inner.innerHTML=matches.map(p=>{
+    const cat=(CATS.find(c=>c.id===p.cat)||{}).label||'';
+    return `<div class="pkc-search-result-item" onclick="openOrderModal(${p.id});closeSearch()">
+      <img class="pkc-search-result-img" src="${p.img}" alt="${p.name}" loading="lazy">
+      <div class="pkc-search-result-info">
+        <div class="pkc-search-result-name">${p.name}</div>
+        <div class="pkc-search-result-cat">${cat}</div>
+      </div>
+      <span class="pkc-search-result-price">R${p.price}</span>
+    </div>`;
+  }).join('');
+  results.classList.add('visible');
+}
+function closeSearch(){
+  const input=document.getElementById('pkc-search-input');
+  const results=document.getElementById('pkc-search-results');
+  if(input)input.value='';
+  if(results)results.classList.remove('visible');
+}
+// Close search on outside click
+document.addEventListener('click',function(e){
+  const wrap=document.getElementById('pkc-search-input');
+  const results=document.getElementById('pkc-search-results');
+  if(wrap&&results&&!wrap.contains(e.target)&&!results.contains(e.target)){
+    results.classList.remove('visible');
+  }
+});
 
 function productCardHTML(p,i){
   const isFav=favourites.has(p.id);
@@ -193,6 +271,14 @@ function openOrderModal(id){
   document.getElementById('orderModalPhoto').src=currentProduct.img;
   document.getElementById('orderModalName').textContent=currentProduct.name;
   document.getElementById('orderModalSub').textContent=currentProduct.desc;
+  // badge
+  const badgeEl=document.getElementById('orderModalBadge');
+  if(currentProduct.badge){
+    badgeEl.textContent=currentProduct.badge==='popular'?'🔥 Popular':'✨ New';
+    badgeEl.style.display='block';
+  } else {
+    badgeEl.style.display='none';
+  }
   // reset options
   document.querySelectorAll('.size-btn').forEach((b,i)=>b.classList.toggle('selected',i===0));
   document.querySelectorAll('.coffee-type-option').forEach((b,i)=>b.classList.toggle('selected',i===0));
@@ -201,12 +287,12 @@ function openOrderModal(id){
   document.getElementById('sugarDisplay').textContent='No sugar';
   document.getElementById('qtyDisplay').textContent='1';
   document.getElementById('orderNotes').value='';
-  // show/hide coffee options
+  // hide coffee-specific sections for non-coffee items
   const isCoffee=currentProduct.coffee;
   document.getElementById('coffeeTypeSection').style.display=isCoffee?'':'none';
   document.getElementById('sugarSection').style.display=isCoffee?'':'none';
   document.getElementById('sizeSection').style.display=isCoffee?'':'none';
-  // scroll to top
+  // scroll right pane to top
   document.getElementById('orderModalScroll').scrollTop=0;
   updateAddBtn();
   document.getElementById('orderOverlay').classList.add('open');
@@ -216,7 +302,10 @@ function closeOrderModal(){
   document.getElementById('orderOverlay').classList.remove('open');
   document.getElementById('pkc-page').classList.remove('modal-open');
 }
-function closeOnBg(e,id){if(e.target.id===id)closeOrderModal();}
+function closeOnBg(e,id){
+  // Only close if clicking directly on the dark overlay, not the sheet
+  if(e.target.id===id)closeOrderModal();
+}
 
 function selectSize(btn,s,extra){
   currentSizeExtra=extra;
@@ -448,43 +537,103 @@ function toggleMobileNav(){
 }
 
 /* ══════════════════════
-   HEADER SCROLL
+   MOBILE SEARCH
 ══════════════════════ */
+function openMobileSearch(){
+  document.getElementById('pkc-mobile-search-overlay').classList.add('open');
+  document.getElementById('pkc-mobile-search-panel').classList.add('open');
+  document.getElementById('pkc-mobile-search-dim').classList.add('open');
+  setTimeout(()=>{
+    const inp=document.getElementById('pkc-mobile-search-input');
+    if(inp){inp.focus();inp.value='';}
+    document.getElementById('pkc-mobile-search-panel-inner').innerHTML=
+      '<div class="search-empty"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><p>Start typing to search</p><span>Fish, chips, burgers &amp; more…</span></div>';
+  },60);
+}
+function closeMobileSearch(){
+  document.getElementById('pkc-mobile-search-overlay').classList.remove('open');
+  document.getElementById('pkc-mobile-search-panel').classList.remove('open');
+  document.getElementById('pkc-mobile-search-dim').classList.remove('open');
+  const inp=document.getElementById('pkc-mobile-search-input');
+  if(inp){inp.value='';inp.blur();}
+}
+function handleMobileSearch(query){
+  const inner=document.getElementById('pkc-mobile-search-panel-inner');
+  if(!inner)return;
+  const q=query.trim().toLowerCase();
+  if(!q){
+    inner.innerHTML='<div class="search-empty"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><p>Start typing to search</p><span>Fish, chips, burgers &amp; more…</span></div>';
+    return;
+  }
+  const matches=products.filter(p=>
+    p.name.toLowerCase().includes(q)||
+    p.desc.toLowerCase().includes(q)||
+    (CATS.find(c=>c.id===p.cat)||{}).label.toLowerCase().includes(q)
+  ).slice(0,12);
+  if(!matches.length){
+    inner.innerHTML='<div class="search-empty"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><p>No results for "'+query+'"</p><span>Try a different search term</span></div>';
+    return;
+  }
+  inner.innerHTML=matches.map(p=>{
+    const cat=(CATS.find(c=>c.id===p.cat)||{}).label||'';
+    return `<div class="pkc-search-result-item" onclick="closeMobileSearch();openOrderModal(${p.id})">
+      <img class="pkc-search-result-img" src="${p.img}" alt="${p.name}" loading="lazy">
+      <div class="pkc-search-result-info">
+        <div class="pkc-search-result-name">${p.name}</div>
+        <div class="pkc-search-result-cat">${cat}</div>
+      </div>
+      <span class="pkc-search-result-price">R${p.price}</span>
+    </div>`;
+  }).join('');
+}
 let lastScrollY=0;
-window.addEventListener('scroll',()=>{
-  const scrollY=window.scrollY;
+let scrollTicking=false;
+function handleHeaderScroll(){
+  const page=document.getElementById('pkc-page');
+  const scrollY=page?page.scrollTop:window.scrollY;
   const header=document.getElementById('pkc-main-header');
-  // Hide on scroll down, show on scroll up
+  if(!header)return;
+  // Hide when scrolling DOWN past 80px; show when scrolling UP
   if(scrollY>lastScrollY&&scrollY>80){
     header.classList.add('hidden');
   }else{
     header.classList.remove('hidden');
   }
   lastScrollY=scrollY;
-  // Scrolled shadow state
   header.classList.toggle('scrolled',scrollY>60);
-  // Update mobile filter bar top to match header height
+  // Update mobile filter bar top
   const bar=document.getElementById('pkc-mobile-filter-bar');
   if(bar&&window.innerWidth<=900){
-    const headerH=header.offsetHeight;
-    bar.style.top=headerH+'px';
+    bar.style.top=header.offsetHeight+'px';
   }
   // Track active category on scroll (mobile)
-  if(window.innerWidth<=900&&currentFilter==='all'){
-    const cats=['coffee','cold','cake','pastry','tea'];
-    let active='all';
+  if(window.innerWidth<=900){
+    const cats=['fish','burgers','salads','platters','sauces','drinks'];
     for(const cat of cats){
       const el=document.getElementById('cat-'+cat);
       if(!el)continue;
-      const rect=el.getBoundingClientRect();
-      if(rect.top<=160){active=cat;}
+      if(el.getBoundingClientRect().top<=160){
+        // active cat tracking (no sidebar to update, kept for future use)
+      }
     }
-    document.querySelectorAll('.pkc-mobile-filter-tab').forEach(b=>{
-      const match=(active==='all'&&b.textContent.trim()==='All')||(b.getAttribute('onclick')&&b.getAttribute('onclick').includes(`'${active}'`));
-      b.classList.toggle('active',match);
-    });
-    const activeTab=document.querySelector('.pkc-mobile-filter-tab.active');
-    if(activeTab){activeTab.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
+  }
+  scrollTicking=false;
+}
+// Attach to pkc-page (the real scroll container)
+const _page=document.getElementById('pkc-page');
+if(_page){
+  _page.addEventListener('scroll',()=>{
+    if(!scrollTicking){
+      requestAnimationFrame(handleHeaderScroll);
+      scrollTicking=true;
+    }
+  },{passive:true});
+}
+// Fallback for window scroll (in case pkc-page isn't the scroller)
+window.addEventListener('scroll',()=>{
+  if(!scrollTicking){
+    requestAnimationFrame(handleHeaderScroll);
+    scrollTicking=true;
   }
 },{passive:true});
 
@@ -525,6 +674,14 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 /* ══════════════════════
    FOOTER ACCORDION
+═════════�
+
+
+
+
+
+/* ══════════════════════
+   FOOTER ACCORDION
 ══════════════════════ */
 function toggleFooterCol(headEl){
   if(window.innerWidth>768)return;
@@ -533,5 +690,4 @@ function toggleFooterCol(headEl){
   // Close all
   document.querySelectorAll('.pkc-footer-col.open').forEach(c=>c.classList.remove('open'));
   // Open clicked if it was closed
-  if(!isOpen)col.classList.add('open');
-}
+  if(!isOpen)col.classList.add('open');}
