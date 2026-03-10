@@ -274,7 +274,7 @@ function openOrderModal(id){
   // badge
   const badgeEl=document.getElementById('orderModalBadge');
   if(currentProduct.badge){
-    badgeEl.textContent=currentProduct.badge==='popular'?'🔥 Popular':'✨ New';
+    badgeEl.textContent=currentProduct.badge==='popular'?'Popular': 'New';
     badgeEl.style.display='block';
   } else {
     badgeEl.style.display='none';
